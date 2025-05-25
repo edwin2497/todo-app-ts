@@ -7,6 +7,8 @@ import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   { files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"], plugins: { js }, extends: ["js/recommended"] },
+  tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     ignores: ["eslint.config.js"],
@@ -19,9 +21,10 @@ export default defineConfig([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
       },
     },
+    rules:{
+      "react/react-in-jsx-scope": "off",
+    }
   },
-  tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
 ]);
 
 
