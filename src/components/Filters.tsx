@@ -1,10 +1,10 @@
 import type {MouseEvent, ReactElement} from "react";
 import {FILTERS_BUTTONS} from "../const.ts";
-import {useAppSelector} from "../hooks";
-import type {TodosState} from "../types";
+// import {useAppSelector} from "../hooks";
+// import type {TodosState} from "../types";
 
 export const Filters = (): ReactElement => {
-    const {filter} = useAppSelector((state: { [key: string]: TodosState }) => state.todos)
+    //const {filter} = useAppSelector((state: { [key: string]: TodosState }) => state.todos)
 
 
     const handleFilterChange = (event: MouseEvent<HTMLAnchorElement>) => {
